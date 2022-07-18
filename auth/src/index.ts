@@ -6,7 +6,9 @@ app.use(json());
 app.use(urlencoded({ extended: true }));
 
 app.get('/api/users/currentuser', (req, res) => {
-  res.send('Hi there!');
+  res.status(200).json({
+    message: 'Hi there!'
+  });
 });
 
 app.listen(3000, () => {
